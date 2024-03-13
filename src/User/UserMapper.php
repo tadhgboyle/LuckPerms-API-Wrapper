@@ -12,7 +12,7 @@ class UserMapper implements Mapper
             $data['username'],
             $data['uniqueId'],
             $data['nodes'],
-            $data['metaData'],
+            $data['metadata'],
         );
     }
 }

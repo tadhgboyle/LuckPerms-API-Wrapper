@@ -74,7 +74,7 @@ class GroupRepositoryTest extends TestCase {
                 'name' => 'staff',
                 'displayName' => 'Staff',
                 'weight' => 1,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [
                         'test' => 'test staff value',
                     ],
@@ -136,7 +136,7 @@ class GroupRepositoryTest extends TestCase {
                 'name' => 'staff',
                 'displayName' => 'Staff',
                 'weight' => 1,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [
                         'test' => 'test staff value',
                     ],

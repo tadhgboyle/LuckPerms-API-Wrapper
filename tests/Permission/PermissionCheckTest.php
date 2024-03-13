@@ -39,7 +39,7 @@ class PermissionCheckTest extends TestCase {
                         'context' => [],
                     ],
                 ],
-                'metaData' => [
+                'metadata' => [
                     'meta' => [],
                     'prefix' => '',
                     'suffix' => '',
@@ -87,7 +87,7 @@ class PermissionCheckTest extends TestCase {
                 'name' => 'default',
                 'displayName' => 'Default',
                 'weight' => 1,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [],
                 ],
                 'nodes' => [
@@ -129,7 +129,7 @@ class PermissionCheckTest extends TestCase {
                 'name' => 'default',
                 'displayName' => 'Default',
                 'weight' => 1,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [],
                 ],
                 'nodes' => [
@@ -205,7 +205,7 @@ class PermissionCheckTest extends TestCase {
                 'name' => 'default',
                 'displayName' => 'Default',
                 'weight' => 1,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [],
                 ],
                 'nodes' => [

@@ -106,7 +106,7 @@ class UserRepositoryTest extends TestCase {
                         ],
                     ],
                 ],
-                'metaData' => [
+                'metadata' => [
                     'meta' => [
                         'test' => 'test value',
                     ],
@@ -169,7 +169,7 @@ class UserRepositoryTest extends TestCase {
                         ],
                     ],
                 ],
-                'metaData' => [
+                'metadata' => [
                     'meta' => [
                         'test' => 'test value',
                     ],
@@ -182,7 +182,7 @@ class UserRepositoryTest extends TestCase {
                 'name' => 'staff',
                 'displayName' => 'Staff',
                 'weight' => 1,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [
                         'test' => 'test staff value',
                     ],
@@ -211,7 +211,7 @@ class UserRepositoryTest extends TestCase {
                 'name' => 'member',
                 'displayName' => 'Meember!',
                 'weight' => 5,
-                'metaData' => [
+                'metadata' => [
                     'meta' => [
                         'test' => 'test meember value',
                     ],

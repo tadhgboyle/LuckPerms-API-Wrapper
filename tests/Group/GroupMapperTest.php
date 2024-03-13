@@ -38,7 +38,7 @@ class GroupMapperTest extends TestCase {
                         'context' => [],
                     ]
                 ],
-                'metaData' => [
+                'metadata' => [
                     'meta' => [],
                 ],
             ],
@@ -59,7 +59,7 @@ class GroupMapperTest extends TestCase {
                         ],
                     ],
                 ],
-                'metaData' => [
+                'metadata' => [
                     'meta' => [],
                 ],
             ],

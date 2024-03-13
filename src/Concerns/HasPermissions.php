@@ -39,7 +39,7 @@ trait HasPermissions
 
         if ($queryOptions !== null) {
             $response = $httpClient->post($route, [
-                'json' => [
+                'form_params' => [
                     $this->identifierMethod() => $this->identifier(),
                     'permission' => $permission,
                     'queryOptions' => $queryOptions->toArray(),
@@ -47,7 +47,7 @@ trait HasPermissions
             ]);
         } else {
             $response = $httpClient->get($route, [
-                'json' => [
+                'query' => [
                     $this->identifierMethod() => $this->identifier(),
                     'permission' => $permission,
                 ],
@@ -56,10 +56,10 @@ trait HasPermissions
 
         $data = json_decode($response->getBody()->getContents(), true);
 
-        return new PermissionCheckResult(
-            $data['result'],
-            resolve(NodeMapper::class)->map($data['node']),
-        );
+        $result = $data['result'] === 'true';
+        $node = isset($data['node']) ? resolve(NodeMapper::class)->map($data['node']) : null;
+
+        return new PermissionCheckResult($result, $node);
     }
 
     private function findRoute(): string

@@ -12,7 +12,7 @@ class GroupMapper implements Mapper
             $data['name'],
             $data['displayName'],
             $data['weight'],
-            $data['metaData'],
+            $data['metadata'],
             $data['nodes'],
         );
     }

@@ -25,13 +25,16 @@ class GroupRepository extends Repository
     public function search(Search $search): Collection
     {
         $response = $this->session->httpClient->get('/group/search', [
-            'search' => $search->toArray(),
+            'query' => $search->toArray(),
         ]);
 
         $groupMapper = resolve(GroupMapper::class);
 
-        return collect($this->json($response->getBody()->getContents()))->map(function (array $group) use ($groupMapper) {
-            return $groupMapper->map($group);
+        return collect($this->json($response->getBody()->getContents()))->map(function ($userData) {
+            return [
+                'name' => $userData['name'],
+                'results' => $userData['results'],
+            ];
         });
     }
 

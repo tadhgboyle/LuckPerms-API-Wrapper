@@ -25,13 +25,16 @@ class UserRepository extends Repository
     public function search(Search $search): Collection
     {
         $response = $this->session->httpClient->get('/user/search', [
-            'search' => $search->toArray(),
+            'query' => $search->toArray(),
         ]);
 
         $userMapper = resolve(UserMapper::class);
 
-        return collect($this->json($response->getBody()->getContents()))->map(function (array $user) use ($userMapper) {
-            return $userMapper->map($user);
+        return collect($this->json($response->getBody()->getContents()))->map(function ($userData) {
+            return [
+                'uniqueId' => $userData['uniqueId'],
+                'results' => $userData['results'],
+            ];
         });
     }
 
